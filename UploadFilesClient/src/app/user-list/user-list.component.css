@@ -1,0 +1,61 @@
+mat-card {
+    width: 20%;
+    margin-left: 50px;
+    background-color: rgb(247, 245, 245);
+    cursor: pointer;
+}
+
+.active {
+    border-color: black;
+    background-color: rebeccapurple;
+}
+
+.container {
+    position: relative;
+    margin-top: 80px;
+}
+
+.user-details {
+    width: 45%;
+    position: absolute;
+    right: 15px;
+    top: 30px
+}
+
+.mat-elevation-z8 {
+    width: 20%;
+}
+
+th {
+    position: relative;
+}
+
+td {
+    cursor: pointer;
+}
+
+mat-form-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mat-mdc-form-field-bottom-align {
+    display: none !important;
+}
+
+mat-icon {
+    position: absolute;
+    right: 0;
+    top: 17px;
+    cursor: pointer;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mat-elevation-z8 {
+    background: transparent !important;
+}

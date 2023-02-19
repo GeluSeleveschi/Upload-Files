@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body class="custom-background">
+  <div class="container">
+    <div class="user-details">
+      <app-user-details [selectedUser]="selectedUser" [photo]="profilePhoto" [file]="file"></app-user-details>
+    </div>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort style="background-color: rgba(255, 255, 255, 0.1);">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <mat-form-field>
+              <mat-label>Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" #input>
+              <mat-icon routerLink="/user/create">add_circle_outline</mat-icon>
+            </mat-form-field>
+          </th>
+          <td mat-cell *matCellDef="let row" [ngClass]="{'active': row?.id == selectedUser?.id}"
+            (click)="onSelectedUser(row)"> {{row.firstName}} {{row.lastName}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <tr class="mat-row" *matNoDataRow style="background-color: rgba(255, 255, 255, 0.2);">
+          <td class="mat-cell" *ngIf="users.length" colspan="4">No data matching the filter "{{input?.value}}"</td>
+        </tr>
+      </table>
+
+      <mat-paginator style="background-color: rgba(255, 255, 255, 0.2);" [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page of users"></mat-paginator>
+      <br>
+    </div>
+  </div>
+</body>
+
+</html>

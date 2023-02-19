@@ -1,0 +1,71 @@
+.mat-card {    
+    text-align: -webkit-center;    
+    max-width: 60%;
+}    
+    
+.demo-toolbar {    
+    display: flex;    
+    align-items: center;    
+    width: 100%;    
+}    
+    
+.demo-form {    
+    min-width: 150px;    
+    max-width: 500px;    
+    width: 100%;    
+}    
+    
+.demo-full-width {    
+    width: 100%;    
+}    
+    
+body {    
+    margin: 0;    
+    font-family: Roboto, sans-serif;    
+}    
+    
+mat-card {    
+    width: 600px;    
+    margin: 2em auto;    
+    text-align: center;  
+    background-color: rgba(255, 255, 255, 0.2);
+}    
+    
+mat-toolbar-row {    
+    justify-content: space-between;    
+}    
+    
+.done {    
+    position: fixed;    
+    bottom: 20px;    
+    right: 20px;    
+    color: white;    
+}    
+    
+.content-center {    
+    text-align: -webkit-center;    
+}    
+
+table{
+    display: initial;
+}
+
+.gender{
+    margin-left: 10px;
+}
+
+.photos {
+    margin-top: 20px;
+}
+.photo {
+    margin-bottom: 5px;
+}
+
+.back{
+    border-radius: 20px;
+}
+
+.gender, .radio-buttons{
+    color: white;
+    font-weight: 700;
+}

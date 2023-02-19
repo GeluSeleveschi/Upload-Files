@@ -1,0 +1,9 @@
+.material-icons {
+    margin-top: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+mat-card {
+    background-color: rgba(255, 255, 255, 0.6);
+}

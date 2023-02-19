@@ -1,0 +1,22 @@
+<div class="row" style="margin-bottom: 15px;">
+    <div class="col-md-4">
+        <input type="file" #photo placeholder="Choose file" (change)="uploadPhoto(photo.files)" style="display: none;">
+        <button type="button" class="btn btn-success" (click)="photo.click()">
+            <mat-icon (click)="photo.click()">cloud_upload</mat-icon> <span style="margin-left: 30px;">Photo</span>
+        </button>
+    </div>
+    <div class="col-md-8">
+        <div class="fileName"><span>{{photoName}}</span></div>
+    </div><br><br>
+
+    <div class="col-md-4">
+        <input type="file" #file placeholder="Choose file" (change)="onFileChange($event)" style="display: none;">
+        <button type="button" class="btn btn-success" (click)="file.click()">
+            <mat-icon>cloud_upload</mat-icon> <span style="margin-left: 30px;">File</span>
+        </button>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="fileName"><span>{{fileName}}</span></div>
+    </div>
+</div>
